@@ -20,7 +20,9 @@ Program that browsed websites looking for phone information.
 
 ## Functionalities
 
-:heavy_check_mark: `Functionality 1:` Automatic inclusion in google spreadsheet.
+:heavy_check_mark: `Functionality 1:` Request for searches on a given site through the request library.
+
+:heavy_check_mark: `Functionality 2:` Parsing the html code.
 
 ## Technologies used
 <p>
