@@ -1,5 +1,6 @@
 import re
 import threading
+from PyPDF2 import PdfFileWriter
 
 import requests
 from bs4 import BeautifulSoup
@@ -74,8 +75,9 @@ def descobrir_telefones():
                 telefones = encontrar_telefone(soup_anuncio)
                 if telefones:
                     for telefone in telefones:
-                        print("Telefone encontrado: {} através do anúncio: {}".format(telefone,DOMINIO + link_anuncio))
                         TELEFONES.append(telefone)
+                        print(TELEFONES)
+
 
 if __name__ == "__main__":
     resposta_busca = requisicao(URL_AUTOMOVEIS)
@@ -94,5 +96,3 @@ if __name__ == "__main__":
 
             for t in THREADS:
                 t.join()
-
-            print(TELEFONES)
