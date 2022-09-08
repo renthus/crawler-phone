@@ -9,7 +9,6 @@ DOMINIO  = "https://django-anuncios.solyd.com.br"
 URL_AUTOMOVEIS = "https://django-anuncios.solyd.com.br/automoveis/"
 
 LINKS = []
-TELEFONES = []
 
 def requisicao(url):
     try:
@@ -74,10 +73,12 @@ def descobrir_telefones():
             if soup_anuncio:
                 telefones = encontrar_telefone(soup_anuncio)
                 if telefones:
+                    telefone_file = open('arquivo.txt', 'a')
                     for telefone in telefones:
-                        TELEFONES.append(telefone)
-                        print(TELEFONES)
-
+                        telefone = 'Telefone: ({}){}{} encontrado na url: {}'\
+                            .format(telefone[0],telefone[1],telefone[2],DOMINIO + link_anuncio)
+                        telefone_file.write(str(telefone)+'\n')
+                    telefone_file.close()
 
 if __name__ == "__main__":
     resposta_busca = requisicao(URL_AUTOMOVEIS)

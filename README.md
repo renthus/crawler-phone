@@ -30,6 +30,8 @@ Program that browsed websites looking for phone information.
 
 :heavy_check_mark: `Functionality 5:` Increased program efficiency with multi-threading.
 
+:heavy_check_mark: `Functionality 6:` Save file in .txt format.
+
 ## Technologies used
 <p>
 <img align="center" alt="Renato-python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
