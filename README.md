@@ -18,6 +18,8 @@
 
 Program that browsed websites looking for phone information.
 
+https://user-images.githubusercontent.com/49447595/189013137-ed72b599-2d66-4ba9-85c2-e59f9006ee1d.mp4
+
 ## Functionalities
 
 :heavy_check_mark: `Functionality 1:` Request for searches on a given site through the request library.
