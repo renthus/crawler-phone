@@ -1,6 +1,5 @@
 import re
 import threading
-from PyPDF2 import PdfFileWriter
 
 import requests
 from bs4 import BeautifulSoup
@@ -77,6 +76,7 @@ def descobrir_telefones():
                     for telefone in telefones:
                         telefone = 'Telefone: ({}){}{} encontrado na url: {}'\
                             .format(telefone[0],telefone[1],telefone[2],DOMINIO + link_anuncio)
+                        print(telefone)
                         telefone_file.write(str(telefone)+'\n')
                     telefone_file.close()
 
